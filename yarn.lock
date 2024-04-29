@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@babel/runtime@^7.23.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2":
+  version "7.24.4"
+  resolved "http://npm.prakticum-team.ru/@babel/runtime/-/runtime-7.24.4.tgz#de795accd698007a66ba44add6cc86542aff1edd"
+  integrity sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@esbuild/aix-ppc64@0.20.2":
   version "0.20.2"
   resolved "http://npm.prakticum-team.ru/@esbuild/aix-ppc64/-/aix-ppc64-0.20.2.tgz#a70f4ac11c6a1dfc18b8bbb13284155d933b9537"
@@ -149,6 +156,33 @@
   resolved "http://npm.prakticum-team.ru/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@floating-ui/core@^1.0.0":
+  version "1.6.1"
+  resolved "http://npm.prakticum-team.ru/@floating-ui/core/-/core-1.6.1.tgz#a4e6fef1b069cda533cbc7a4998c083a37f37573"
+  integrity sha512-42UH54oPZHPdRHdw6BgoBD6cg/eVTmVrFcgeRDM3jbO7uxSoipVcmcIGFcA5jmOHO5apcyvBhkSKES3fQJnu7A==
+  dependencies:
+    "@floating-ui/utils" "^0.2.0"
+
+"@floating-ui/dom@^1.0.0":
+  version "1.6.4"
+  resolved "http://npm.prakticum-team.ru/@floating-ui/dom/-/dom-1.6.4.tgz#3a9d1f3b7ccdab89a4ca05713acc6204b1f67a29"
+  integrity sha512-0G8R+zOvQsAG1pg2Q99P21jiqxqGBW1iRe/iXHsBRBxnpXKFI8QwbB4x5KmYLggNO5m34IQgOIu9SCRfR/WWiQ==
+  dependencies:
+    "@floating-ui/core" "^1.0.0"
+    "@floating-ui/utils" "^0.2.0"
+
+"@floating-ui/react-dom@^2.0.8":
+  version "2.0.9"
+  resolved "http://npm.prakticum-team.ru/@floating-ui/react-dom/-/react-dom-2.0.9.tgz#264ba8b061000baa132b5910f0427a6acf7ad7ce"
+  integrity sha512-q0umO0+LQK4+p6aGyvzASqKbKOJcAHJ7ycE9CuUvfx3s9zTHWmGJTPOIlM/hmSBfUfg/XfY5YhLBLR/LHwShQQ==
+  dependencies:
+    "@floating-ui/dom" "^1.0.0"
+
+"@floating-ui/utils@^0.2.0":
+  version "0.2.2"
+  resolved "http://npm.prakticum-team.ru/@floating-ui/utils/-/utils-0.2.2.tgz#d8bae93ac8b815b2bd7a98078cf91e2724ef11e5"
+  integrity sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "http://npm.prakticum-team.ru/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"
@@ -189,85 +223,90 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@remix-run/router@1.16.0":
+  version "1.16.0"
+  resolved "http://npm.prakticum-team.ru/@remix-run/router/-/router-1.16.0.tgz#0e10181e5fec1434eb071a9bc4bdaac843f16dcc"
+  integrity sha512-Quz1KOffeEf/zwkCBM3kBtH4ZoZ+pT3xIXBG4PPW/XFtDP7EGhtTiC2+gpL9GnR7+Qdet5Oa6cYSvwKYg6kN9Q==
+
 "@rollup/rollup-android-arm-eabi@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.17.0.tgz#bc8d14ba7673d901a0d5b4b5061dd4f843ab1797"
-  integrity sha512-nNvLvC2fjC+3+bHYN9uaGF3gcyy7RHGZhtl8TB/kINj9hiOQza8kWJGZh47GRPMrqeseO8U+Z8ElDMCZlWBdHA==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.17.1.tgz#4a5135e88d522dbf85c4ca43ad14af9dab27bd07"
+  integrity sha512-P6Wg856Ou/DLpR+O0ZLneNmrv7QpqBg+hK4wE05ijbC/t349BRfMfx+UFj5Ha3fCFopIa6iSZlpdaB4agkWp2Q==
 
 "@rollup/rollup-android-arm64@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.17.0.tgz#be0cac9af51c9c9b4b064f335fb9886b95b1df8a"
-  integrity sha512-+kjt6dvxnyTIAo7oHeYseYhDyZ7xRKTNl/FoQI96PHkJVxoChldJnne/LzYqpqidoK1/0kX0/q+5rrYqjpth6w==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.17.1.tgz#e32d5e6511a49ddd64c22f8b3668049f63b7b04c"
+  integrity sha512-piwZDjuW2WiHr05djVdUkrG5JbjnGbtx8BXQchYCMfib/nhjzWoiScelZ+s5IJI7lecrwSxHCzW026MWBL+oJQ==
 
 "@rollup/rollup-darwin-arm64@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.17.0.tgz#6e829f61560dbae75f0ba94bf345d9608150703e"
-  integrity sha512-Oj6Tp0unMpGTBjvNwbSRv3DopMNLu+mjBzhKTt2zLbDJ/45fB1pltr/rqrO4bE95LzuYwhYn127pop+x/pzf5w==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.17.1.tgz#d57357c6519ae10605dd5f1881534f490fd1ae3c"
+  integrity sha512-LsZXXIsN5Q460cKDT4Y+bzoPDhBmO5DTr7wP80d+2EnYlxSgkwdPfE3hbE+Fk8dtya+8092N9srjBTJ0di8RIA==
 
 "@rollup/rollup-darwin-x64@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.17.0.tgz#4e35f5f2c28ae3e160e1259d473e51b9defa69db"
-  integrity sha512-3nJx0T+yptxMd+v93rBRxSPTAVCv8szu/fGZDJiKX7kvRe9sENj2ggXjCH/KK1xZEmJOhaNo0c9sGMgGdfkvEw==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.17.1.tgz#2291592328f6a2fb5dba3f1f41a05a078325a674"
+  integrity sha512-S7TYNQpWXB9APkxu/SLmYHezWwCoZRA9QLgrDeml+SR2A1LLPD2DBUdUlvmCF7FUpRMKvbeeWky+iizQj65Etw==
 
 "@rollup/rollup-linux-arm-gnueabihf@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.17.0.tgz#186c3aa4a9f6db70a4d1b8b6f75b98f1dc1d004d"
-  integrity sha512-Vb2e8p9b2lxxgqyOlBHmp6hJMu/HSU6g//6Tbr7x5V1DlPCHWLOm37nSIVK314f+IHzORyAQSqL7+9tELxX3zQ==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.17.1.tgz#8851254fc581d860940ab27009c07dde80666e82"
+  integrity sha512-Lq2JR5a5jsA5um2ZoLiXXEaOagnVyCpCW7xvlcqHC7y46tLwTEgUSTM3a2TfmmTMmdqv+jknUioWXlmxYxE9Yw==
 
 "@rollup/rollup-linux-arm-musleabihf@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.17.0.tgz#9824aaa641d9fc12c66866a2c5d03847d43fea3a"
-  integrity sha512-Md60KsmC5ZIaRq/bYYDloklgU+XLEZwS2EXXVcSpiUw+13/ZASvSWQ/P92rQ9YDCL6EIoXxuQ829JkReqdYbGg==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.17.1.tgz#31c41636467cb0dd5f19e306929f2f4c54bb98dd"
+  integrity sha512-9BfzwyPNV0IizQoR+5HTNBGkh1KXE8BqU0DBkqMngmyFW7BfuIZyMjQ0s6igJEiPSBvT3ZcnIFohZ19OqjhDPg==
 
 "@rollup/rollup-linux-arm64-gnu@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.17.0.tgz#a6c51266ec41df8431ccb3a5d9c09339264d86b8"
-  integrity sha512-zL5rBFtJ+2EGnMRm2TqKjdjgFqlotSU+ZJEN37nV+fiD3I6Gy0dUh3jBWN0wSlcXVDEJYW7YBe+/2j0N9unb2w==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.17.1.tgz#30d3e02585c7b1d2ea96b2834a79aeb1fb10237b"
+  integrity sha512-e2uWaoxo/rtzA52OifrTSXTvJhAXb0XeRkz4CdHBK2KtxrFmuU/uNd544Ogkpu938BzEfvmWs8NZ8Axhw33FDw==
 
 "@rollup/rollup-linux-arm64-musl@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.17.0.tgz#c862f69b1b979bae65545c55f005ca227b695778"
-  integrity sha512-s2xAyNkJqUdtRVgNK4NK4P9QttS538JuX/kfVQOdZDI5FIKVAUVdLW7qhGfmaySJ1EvN/Bnj9oPm5go9u8navg==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.17.1.tgz#e6a4cdb552ff859b2fce275937999789ae72f659"
+  integrity sha512-ekggix/Bc/d/60H1Mi4YeYb/7dbal1kEDZ6sIFVAE8pUSx7PiWeEh+NWbL7bGu0X68BBIkgF3ibRJe1oFTksQQ==
 
 "@rollup/rollup-linux-powerpc64le-gnu@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-powerpc64le-gnu/-/rollup-linux-powerpc64le-gnu-4.17.0.tgz#ce19c505ef6ce2c83df74b42824d95d38069cc2b"
-  integrity sha512-7F99yzVT67B7IUNMjLD9QCFDCyHkyCJMS1dywZrGgVFJao4VJ9szrIEgH67cR+bXQgEaY01ur/WSL6B0jtcLyA==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-powerpc64le-gnu/-/rollup-linux-powerpc64le-gnu-4.17.1.tgz#35b5af3ded0b20dd7cc00813d96f9823b321d2ea"
+  integrity sha512-UGV0dUo/xCv4pkr/C8KY7XLFwBNnvladt8q+VmdKrw/3RUd3rD0TptwjisvE2TTnnlENtuY4/PZuoOYRiGp8Gw==
 
 "@rollup/rollup-linux-riscv64-gnu@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.17.0.tgz#0f9719bec216cf2769ac9f420211190b2f55c8fa"
-  integrity sha512-leFtyiXisfa3Sg9pgZJwRKITWnrQfhtqDjCamnZhkZuIsk1FXmYwKoTkp6lsCgimIcneFFkHKp/yGLxDesga4g==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.17.1.tgz#59fef3d0a5feee3b072d92898c9d62c0c7e6e95c"
+  integrity sha512-gEYmYYHaehdvX46mwXrU49vD6Euf1Bxhq9pPb82cbUU9UT2NV+RSckQ5tKWOnNXZixKsy8/cPGtiUWqzPuAcXQ==
 
 "@rollup/rollup-linux-s390x-gnu@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.17.0.tgz#89cd27358ceb2351ae92b263df2ed0523f90b926"
-  integrity sha512-FtOgui6qMJ4jbSXTxElsy/60LEe/3U0rXkkz2G5CJ9rbHPAvjMvI+3qF0A0fwLQ5hW+/ZC6PbnS2KfRW9JkgDQ==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.17.1.tgz#004f361e29c5b6cd6fb35192583ec2adf541c366"
+  integrity sha512-xeae5pMAxHFp6yX5vajInG2toST5lsCTrckSRUFwNgzYqnUjNBcQyqk1bXUxX5yhjWFl2Mnz3F8vQjl+2FRIcw==
 
 "@rollup/rollup-linux-x64-gnu@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.17.0.tgz#854122ced306100a0f1bfe9085dce98360554efa"
-  integrity sha512-v6eiam/1w3HUfU/ZjzIDodencqgrSqzlNuNtiwH7PFJHYSo1ezL0/UIzmS2lpSJF1ORNaplXeKHYmmdt81vV2g==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.17.1.tgz#61fbc6580b972893c1e74ac460d41f6ca4143482"
+  integrity sha512-AsdnINQoDWfKpBzCPqQWxSPdAWzSgnYbrJYtn6W0H2E9It5bZss99PiLA8CgmDRfvKygt20UpZ3xkhFlIfX9zQ==
 
 "@rollup/rollup-linux-x64-musl@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.17.0.tgz#6a96d08c563cb9b90ce806ebcb218518872ec408"
-  integrity sha512-OUhkSdpM5ofVlVU2k4CwVubYwiwu1a4jYWPpubzN7Vzao73GoPBowHcCfaRSFRz1SszJ3HIsk3dZYk4kzbqjgw==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.17.1.tgz#9d8f4c016f587bab6a1c21fbb966fdb4d076bbb9"
+  integrity sha512-KoB4fyKXTR+wYENkIG3fFF+5G6N4GFvzYx8Jax8BR4vmddtuqSb5oQmYu2Uu067vT/Fod7gxeQYKupm8gAcMSQ==
 
 "@rollup/rollup-win32-arm64-msvc@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.17.0.tgz#a0403ef24fe50d28b7c18dcf97d88d882950bbd8"
-  integrity sha512-uL7UYO/MNJPGL/yflybI+HI+n6+4vlfZmQZOCb4I+z/zy1wisHT3exh7oNQsnL6Eso0EUTEfgQ/PaGzzXf6XyQ==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.17.1.tgz#f1b28caca6d97beab3e3a5e623b97610a423bea5"
+  integrity sha512-J0d3NVNf7wBL9t4blCNat+d0PYqAx8wOoY+/9Q5cujnafbX7BmtYk3XvzkqLmFECaWvXGLuHmKj/wrILUinmQg==
 
 "@rollup/rollup-win32-ia32-msvc@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.17.0.tgz#b9a2dd65241a78a434592b917430702b3c360fc1"
-  integrity sha512-4WnSgaUiUmXILwFqREdOcqvSj6GD/7FrvSjhaDjmwakX9w4Z2F8JwiSP1AZZbuRkPqzi444UI5FPv33VKOWYFQ==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.17.1.tgz#f13b76ecfba6820867f23b805f6626e02c7300ec"
+  integrity sha512-xjgkWUwlq7IbgJSIxvl516FJ2iuC/7ttjsAxSPpC9kkI5iQQFHKyEN5BjbhvJ/IXIZ3yIBcW5QDlWAyrA+TFag==
 
 "@rollup/rollup-win32-x64-msvc@4.17.1":
-  version "4.17.0"
-  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.17.0.tgz#3b8ec9d6a7eccca80dd1f16fe444abe128a2ec08"
-  integrity sha512-ve+D8t1prRSRnF2S3pyDtTXDlvW1Pngbz76tjgYFQW1jxVSysmQCZfPoDAo4WP+Ano8zeYp85LsArZBI12HfwQ==
+  version "4.17.1"
+  resolved "http://npm.prakticum-team.ru/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.17.1.tgz#e672de70ce490e5564fe75171373d1653b5694da"
+  integrity sha512-0QbCkfk6cnnVKWqqlC0cUrrUMDMfu5ffvYMTUHf+qMN2uAb3MKP31LPcwiMXBNsvoFGs/kYdFOsuLmvppCopXA==
 
 "@swc/core-darwin-arm64@1.5.0":
   version "1.5.0"
@@ -342,6 +381,13 @@
   version "0.1.3"
   resolved "http://npm.prakticum-team.ru/@swc/counter/-/counter-0.1.3.tgz#cc7463bd02949611c6329596fccd2b0ec782b0e9"
   integrity sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==
+
+"@swc/helpers@^0.5.0", "@swc/helpers@^0.5.1", "@swc/helpers@^0.5.3":
+  version "0.5.11"
+  resolved "http://npm.prakticum-team.ru/@swc/helpers/-/helpers-0.5.11.tgz#5bab8c660a6e23c13b2d23fcd1ee44a2db1b0cb7"
+  integrity sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==
+  dependencies:
+    tslib "^2.4.0"
 
 "@swc/types@^0.1.5":
   version "0.1.6"
@@ -483,6 +529,47 @@
   dependencies:
     "@swc/core" "^1.3.107"
 
+"@vkontakte/icons-sprite@2.0.0":
+  version "2.0.0"
+  resolved "http://npm.prakticum-team.ru/@vkontakte/icons-sprite/-/icons-sprite-2.0.0.tgz#5153e4d16f6c1c433a58cd4e099d9326a070cecc"
+  integrity sha512-P/AMcwSfiRY0tEEMv6jIt5FgAo7lr4K8uCeOD/c8CCuLEZFoUfMW7D50IWaGKHyCTWgPIFgGFiOypj45pD5hVg==
+  dependencies:
+    "@swc/helpers" "^0.5.1"
+
+"@vkontakte/icons@^2.62.0":
+  version "2.112.0"
+  resolved "http://npm.prakticum-team.ru/@vkontakte/icons/-/icons-2.112.0.tgz#87673b4199bed959bc3a9bd4084012658dc4644b"
+  integrity sha512-0cqLO5HwIqYxlaKh90FmYw9Do5lFvpQmirR3qzTjFF4h6jRv2bMJ777MqaTcU5UrV8LJO/QHkDRszZxzN7Fp/g==
+  dependencies:
+    "@vkontakte/icons-sprite" "2.0.0"
+
+"@vkontakte/vkjs@^1.1.1":
+  version "1.1.2"
+  resolved "http://npm.prakticum-team.ru/@vkontakte/vkjs/-/vkjs-1.1.2.tgz#bde6c651aa2aac63faac008cd0121a96df6fab5f"
+  integrity sha512-GNrbq0zDW3hsPAnS7N6jML5G7+p1KetvaBt9wblwF5HgrKaHNFoaHnF50x8opIBGMZqS1OTkYJ/7BXA5hiVXjg==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+
+"@vkontakte/vkui-floating-ui@^0.1.2":
+  version "0.1.5"
+  resolved "http://npm.prakticum-team.ru/@vkontakte/vkui-floating-ui/-/vkui-floating-ui-0.1.5.tgz#6d9aad1287415864ff77cbdbb19aab4497b31d83"
+  integrity sha512-5BJOI3/K+aDMdhpvftbvaAlpXktU9fPkYpG5cOQDKTZ9uissWOc0Kk350vInPWIsH9nlovjswKtVmKl0/fA/mQ==
+  dependencies:
+    "@floating-ui/react-dom" "^2.0.8"
+    "@swc/helpers" "^0.5.3"
+
+"@vkontakte/vkui@^6.0.2":
+  version "6.0.2"
+  resolved "http://npm.prakticum-team.ru/@vkontakte/vkui/-/vkui-6.0.2.tgz#3a1194e08aa8515b958e716dcc5d1b3c5d361fc5"
+  integrity sha512-Wnar49W7iUMANz4nK1c/uM+FayqKsYXPF2NAfxv/EvJrnDAVd5Ryv7zIX/+zo1LX7+MomkWPAjjlG9wRdFjbSQ==
+  dependencies:
+    "@swc/helpers" "^0.5.3"
+    "@vkontakte/icons" "^2.62.0"
+    "@vkontakte/vkjs" "^1.1.1"
+    "@vkontakte/vkui-floating-ui" "^0.1.2"
+    dayjs "^1.11.10"
+    mitt "^3.0.1"
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "http://npm.prakticum-team.ru/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -525,10 +612,29 @@ array-union@^2.1.0:
   resolved "http://npm.prakticum-team.ru/array-union/-/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
+asynckit@^0.4.0:
+  version "0.4.0"
+  resolved "http://npm.prakticum-team.ru/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
+  integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
+
+axios@^1.6.8:
+  version "1.6.8"
+  resolved "http://npm.prakticum-team.ru/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
+  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "http://npm.prakticum-team.ru/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+big-integer@^1.6.16:
+  version "1.6.52"
+  resolved "http://npm.prakticum-team.ru/big-integer/-/big-integer-1.6.52.tgz#60a887f3047614a8e1bffe5d7173490a97dc8c85"
+  integrity sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -551,6 +657,20 @@ braces@^3.0.2:
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   dependencies:
     fill-range "^7.0.1"
+
+broadcast-channel@^3.4.1:
+  version "3.7.0"
+  resolved "http://npm.prakticum-team.ru/broadcast-channel/-/broadcast-channel-3.7.0.tgz#2dfa5c7b4289547ac3f6705f9c00af8723889937"
+  integrity sha512-cIAKJXAxGJceNZGTZSBzMxzyOn72cVgPnKx4dc6LRjQgbaJUQqhy5rzL3zbMxkMWsGKkv2hSFkPRMEXfoMZ2Mg==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    detect-node "^2.1.0"
+    js-sha3 "0.8.0"
+    microseconds "0.2.0"
+    nano-time "1.0.0"
+    oblivious-set "1.0.0"
+    rimraf "3.0.2"
+    unload "2.2.0"
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -577,6 +697,13 @@ color-name@~1.1.4:
   resolved "http://npm.prakticum-team.ru/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
+combined-stream@^1.0.8:
+  version "1.0.8"
+  resolved "http://npm.prakticum-team.ru/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
+  integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+  dependencies:
+    delayed-stream "~1.0.0"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "http://npm.prakticum-team.ru/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -596,6 +723,11 @@ csstype@^3.0.2:
   resolved "http://npm.prakticum-team.ru/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
+dayjs@^1.11.10:
+  version "1.11.11"
+  resolved "http://npm.prakticum-team.ru/dayjs/-/dayjs-1.11.11.tgz#dfe0e9d54c5f8b68ccf8ca5f72ac603e7e5ed59e"
+  integrity sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==
+
 debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
   resolved "http://npm.prakticum-team.ru/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -607,6 +739,16 @@ deep-is@^0.1.3:
   version "0.1.4"
   resolved "http://npm.prakticum-team.ru/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
+
+delayed-stream@~1.0.0:
+  version "1.0.0"
+  resolved "http://npm.prakticum-team.ru/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
+  integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
+
+detect-node@^2.0.4, detect-node@^2.1.0:
+  version "2.1.0"
+  resolved "http://npm.prakticum-team.ru/detect-node/-/detect-node-2.1.0.tgz#c9c70775a49c3d03bc2c06d9a73be550f978f8b1"
+  integrity sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -825,6 +967,20 @@ flatted@^3.2.9:
   resolved "http://npm.prakticum-team.ru/flatted/-/flatted-3.3.1.tgz#21db470729a6734d4997002f439cb308987f567a"
   integrity sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==
 
+follow-redirects@^1.15.6:
+  version "1.15.6"
+  resolved "http://npm.prakticum-team.ru/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "http://npm.prakticum-team.ru/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "http://npm.prakticum-team.ru/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -948,6 +1104,11 @@ isexe@^2.0.0:
   resolved "http://npm.prakticum-team.ru/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
+js-sha3@0.8.0:
+  version "0.8.0"
+  resolved "http://npm.prakticum-team.ru/js-sha3/-/js-sha3-0.8.0.tgz#b9b7a5da73afad7dedd0f8c463954cbde6818840"
+  integrity sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "http://npm.prakticum-team.ru/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -1016,6 +1177,14 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+match-sorter@^6.0.2:
+  version "6.3.4"
+  resolved "http://npm.prakticum-team.ru/match-sorter/-/match-sorter-6.3.4.tgz#afa779d8e922c81971fbcb4781c7003ace781be7"
+  integrity sha512-jfZW7cWS5y/1xswZo8VBOdudUiSd9nifYRWphc9M5D/ee4w4AoXLgBEdRbgVaxbMuagBPeUC5y2Hi8DO6o9aDg==
+  dependencies:
+    "@babel/runtime" "^7.23.8"
+    remove-accents "0.5.0"
+
 merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "http://npm.prakticum-team.ru/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
@@ -1028,6 +1197,23 @@ micromatch@^4.0.4:
   dependencies:
     braces "^3.0.2"
     picomatch "^2.3.1"
+
+microseconds@0.2.0:
+  version "0.2.0"
+  resolved "http://npm.prakticum-team.ru/microseconds/-/microseconds-0.2.0.tgz#233b25f50c62a65d861f978a4a4f8ec18797dc39"
+  integrity sha512-n7DHHMjR1avBbSpsTBj6fmMGh2AGrifVV4e+WYc3Q9lO+xnSZ3NyhcBND3vzzatt05LFhoKFRxrIyklmLlUtyA==
+
+mime-db@1.52.0:
+  version "1.52.0"
+  resolved "http://npm.prakticum-team.ru/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
+  integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
+
+mime-types@^2.1.12:
+  version "2.1.35"
+  resolved "http://npm.prakticum-team.ru/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
+  integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
+  dependencies:
+    mime-db "1.52.0"
 
 minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
@@ -1043,10 +1229,22 @@ minimatch@^9.0.4:
   dependencies:
     brace-expansion "^2.0.1"
 
+mitt@^3.0.1:
+  version "3.0.1"
+  resolved "http://npm.prakticum-team.ru/mitt/-/mitt-3.0.1.tgz#ea36cf0cc30403601ae074c8f77b7092cdab36d1"
+  integrity sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==
+
 ms@2.1.2:
   version "2.1.2"
   resolved "http://npm.prakticum-team.ru/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
+nano-time@1.0.0:
+  version "1.0.0"
+  resolved "http://npm.prakticum-team.ru/nano-time/-/nano-time-1.0.0.tgz#b0554f69ad89e22d0907f7a12b0993a5d96137ef"
+  integrity sha512-flnngywOoQ0lLQOTRNexn2gGSNuM9bKj9RZAWSzhQ+UJYaAFG9bac4DW9VHjUAzrOaIcajHybCTHe/bkvozQqA==
+  dependencies:
+    big-integer "^1.6.16"
 
 nanoid@^3.3.7:
   version "3.3.7"
@@ -1057,6 +1255,11 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://npm.prakticum-team.ru/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
+
+oblivious-set@1.0.0:
+  version "1.0.0"
+  resolved "http://npm.prakticum-team.ru/oblivious-set/-/oblivious-set-1.0.0.tgz#c8316f2c2fb6ff7b11b6158db3234c49f733c566"
+  integrity sha512-z+pI07qxo4c2CulUHCDf9lcqDlMSo72N/4rLUpRXf6fu+q8vjt8y0xS+Tlf8NTJDdTXHbdeO1n3MlbctwEoXZw==
 
 once@^1.3.0:
   version "1.4.0"
@@ -1142,6 +1345,11 @@ prelude-ls@^1.2.1:
   resolved "http://npm.prakticum-team.ru/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "http://npm.prakticum-team.ru/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "http://npm.prakticum-team.ru/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
@@ -1160,12 +1368,46 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-query@^3.39.3:
+  version "3.39.3"
+  resolved "http://npm.prakticum-team.ru/react-query/-/react-query-3.39.3.tgz#4cea7127c6c26bdea2de5fb63e51044330b03f35"
+  integrity sha512-nLfLz7GiohKTJDuT4us4X3h/8unOh+00MLb2yJoGTPjxKs2bc1iDhkNx2bd5MKklXnOD3NrVZ+J2UXujA5In4g==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    broadcast-channel "^3.4.1"
+    match-sorter "^6.0.2"
+
+react-router-dom@^6.23.0:
+  version "6.23.0"
+  resolved "http://npm.prakticum-team.ru/react-router-dom/-/react-router-dom-6.23.0.tgz#8b80ad92ad28f4dc38972e92d84b4c208150545a"
+  integrity sha512-Q9YaSYvubwgbal2c9DJKfx6hTNoBp3iJDsl+Duva/DwxoJH+OTXkxGpql4iUK2sla/8z4RpjAm6EWx1qUDuopQ==
+  dependencies:
+    "@remix-run/router" "1.16.0"
+    react-router "6.23.0"
+
+react-router@6.23.0:
+  version "6.23.0"
+  resolved "http://npm.prakticum-team.ru/react-router/-/react-router-6.23.0.tgz#2f2d7492c66a6bdf760be4c6bdf9e1d672fa154b"
+  integrity sha512-wPMZ8S2TuPadH0sF5irFGjkNLIcRvOSaEe7v+JER8508dyJumm6XZB1u5kztlX0RVq6AzRVndzqcUh6sFIauzA==
+  dependencies:
+    "@remix-run/router" "1.16.0"
+
 react@^18.2.0:
   version "18.3.1"
   resolved "http://npm.prakticum-team.ru/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
   dependencies:
     loose-envify "^1.1.0"
+
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "http://npm.prakticum-team.ru/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
+
+remove-accents@0.5.0:
+  version "0.5.0"
+  resolved "http://npm.prakticum-team.ru/remove-accents/-/remove-accents-0.5.0.tgz#77991f37ba212afba162e375b627631315bed687"
+  integrity sha512-8g3/Otx1eJaVD12e31UbJj1YzdtVvzH85HV7t+9MJYk/u3XmkOUJ5Ys9wQrf9PCPK8+xn4ymzqYCiZl6QWKn+A==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -1177,7 +1419,7 @@ reusify@^1.0.4:
   resolved "http://npm.prakticum-team.ru/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rimraf@^3.0.2:
+rimraf@3.0.2, rimraf@^3.0.2:
   version "3.0.2"
   resolved "http://npm.prakticum-team.ru/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
@@ -1288,6 +1530,11 @@ ts-api-utils@^1.3.0:
   resolved "http://npm.prakticum-team.ru/ts-api-utils/-/ts-api-utils-1.3.0.tgz#4b490e27129f1e8e686b45cc4ab63714dc60eea1"
   integrity sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==
 
+tslib@^2.4.0:
+  version "2.6.2"
+  resolved "http://npm.prakticum-team.ru/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
+  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "http://npm.prakticum-team.ru/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
@@ -1304,6 +1551,14 @@ typescript@^5.2.2:
   version "5.4.5"
   resolved "http://npm.prakticum-team.ru/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
   integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
+
+unload@2.2.0:
+  version "2.2.0"
+  resolved "http://npm.prakticum-team.ru/unload/-/unload-2.2.0.tgz#ccc88fdcad345faa06a92039ec0f80b488880ef7"
+  integrity sha512-B60uB5TNBLtN6/LsgAf3udH9saB5p7gqJwcFfbOEZ8BcBHnGwCf6G/TGiEqkRAxX7zAFIUtzdrXQSdL3Q/wqNA==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    detect-node "^2.0.4"
 
 uri-js@^4.2.2:
   version "4.4.1"
