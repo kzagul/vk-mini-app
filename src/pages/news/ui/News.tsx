@@ -79,7 +79,7 @@ function NewsPage() {
 
     return (
         <>
-         <PanelHeader>Новости хакинга от HackerNews</PanelHeader>
+         {/* <PanelHeader>Новости хакинга от HackerNews</PanelHeader> */}
 
           <Group
             mode="card"

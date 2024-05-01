@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react'
 import '@vkontakte/vkui/dist/vkui.css';
 
 import {
   AppRoot,
   View,
   Panel,
-  AdaptivityProvider, ConfigProvider,
+  PanelHeader,
+  Div,
+  AdaptivityProvider, 
+  ConfigProvider,
 } from '@vkontakte/vkui'
 
 import vkBridge, { parseURLSearchParamsForGetLaunchParams } from '@vkontakte/vk-bridge';
@@ -49,11 +51,12 @@ function App() {
   const adaptivity = transformVKBridgeAdaptivity(useAdaptivity());
   const { vk_platform } = parseURLSearchParamsForGetLaunchParams(window.location.search);
   
+  // appearance={vkBridgeAppearance}
   
   return (
     <>
     <ConfigProvider
-      appearance={vkBridgeAppearance}
+      appearance="light"
       platform={vk_platform === 'desktop_web' ? 'vkcom' : undefined}
       isWebView={vkBridge.isWebView()}
       hasCustomPanelHeaderAfter={true}
@@ -62,6 +65,8 @@ function App() {
         <AppRoot mode="full" safeAreaInsets={vkBridgeInsets}>
           <View activePanel="main">
             <Panel id="main">
+              <PanelHeader>Новости хакинга от HackerNews</PanelHeader>
+
               <RouterProvider router={router} />
             </Panel>
           </View>

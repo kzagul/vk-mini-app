@@ -29,6 +29,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      // "@app/*": '/src/app',
+      // "@pages/*": '/src/pages',
+      
       app: '/src/app',
       entities: '/src/entities',
       features: '/src/features',
