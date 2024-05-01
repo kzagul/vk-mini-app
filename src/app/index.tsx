@@ -1,26 +1,18 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './styles/index.css'
 
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-// } from "react-router-dom";
+import vkBridge from '@vkontakte/vk-bridge'
+import { ConfigProvider, AdaptivityProvider } from '@vkontakte/vkui'
+import '@vkontakte/vkui/dist/vkui.css'
+// import './styles/index.css'
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App/>,
-//   },
-// ]);
-
-{/* <RouterProvider router={router} /> */}
+vkBridge.send('VKWebAppInit');
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-    {/* <RouterProvider router={router} /> */}
-  </React.StrictMode>
-  // <App />
+  // <React.StrictMode>
+  // <ConfigProvider>
+  //   <AdaptivityProvider>
+      <App />
+  //   </AdaptivityProvider>
+  // </ConfigProvider>
 )

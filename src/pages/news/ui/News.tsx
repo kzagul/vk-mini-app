@@ -4,7 +4,21 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import { getArticles } from 'entities/article/api';
+import ArticlesBlock from "widgets/articlesBlock"
+
+import {
+  AppRoot,
+  View,
+  Panel,
+  PanelHeader,
+  Group,
+  Header,
+  CardGrid,
+} from '@vkontakte/vkui'
+
+import ArticleCard from 'entities/article/ui/articleCard.tsx'
+
+import { getArticles, getArticleById } from 'entities/article/api';
 
 function NewsPage() {     
 
@@ -45,8 +59,6 @@ function NewsPage() {
       // }
     };
 
-    const [user, setUser] = useState(null);
-
     useEffect(() => {
       // fetch('https://random-data-api.com/api/users/random_user')
       //       .then(response => response.json())
@@ -67,11 +79,23 @@ function NewsPage() {
 
     return (
         <>
-            <h1>News page</h1>     
-            <Link to={`article`}>
-                <button>click to article</button>
-            </Link>
-            {news?.map((item) => <p key={item}>{item}</p>)}
+         <PanelHeader>Новости хакинга от HackerNews</PanelHeader>
+
+          <Group
+            mode="card"
+            header={<Header mode="secondary">Новости</Header>}
+          >
+            <CardGrid size="s">
+              {news?.slice(0, 10)
+                .map((item) =>
+                  <ArticleCard 
+                    key={item}
+                    id={item}
+                  />
+                )
+              }
+            </CardGrid>
+          </Group>
         </>      
     ); 
 } 
