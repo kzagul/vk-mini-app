@@ -60,7 +60,7 @@ function ArticlesBlock() {
                 Обновить новости
                 </Button>
                 <br />
-                <CardGrid size="s">
+                <CardGrid size="m" style={{height: "100%"}}>
                 {news?.slice(0, 100)
                     .map((item) => 
                     <ArticleCard 

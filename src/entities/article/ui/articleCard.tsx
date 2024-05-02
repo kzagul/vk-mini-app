@@ -1,4 +1,4 @@
-import { Card, Div, Title, Button } from '@vkontakte/vkui'
+import { Card, Div, Title, Button, Paragraph } from '@vkontakte/vkui'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
@@ -21,39 +21,45 @@ function ArticleCard({ id } : { id: string}) {
 
 
   return (
-    // onClick={() => window.open(url, '_blank').focus()}
     <>
     {article && article?.by
       ?
     <Card mode="shadow">
-      {/* <Link to={`article/${article?.id}`}> */}
       <Div
         style={{
           display: 'flex',
-          height: 250,
+          minHeight: 220,
           alignItems: 'start',
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '16px',
-          paddingTop: '32px',
-          paddingBottom: '32px'
+          paddingTop: '16px',
+          paddingBottom: '16px',
         }}
       >
-        <Title level={'2'}>{article?.title}</Title>
+       
+       <Div style={{display: 'flex',  flexDirection: 'column', gap: "4px", padding: '0px'}}>
+          <Title level={'2'}>{article?.title}</Title>
+          <Paragraph>
+            Автор: {article?.by || "Нет автора"}
+          </Paragraph>
+        </Div>
 
-            <p>
-              {article?.by || "Нет автора"}
-            </p>
-            <p>
-              Дата: {formatData(article?.time)}
-            </p>
-            <p>
-              Рейтинг: {article?.score}
-            </p>
+          <Div style={{display: 'flex',  flexDirection: 'column', gap: "8px", padding: '0px'}}>
+            <Div style={{display: 'flex',  flexDirection: 'row', gap: "8px", padding: '0px', flexWrap: "wrap"}}>
+              <Paragraph>
+                Дата: {formatData(article?.time)}
+              </Paragraph>
+              <Paragraph>
+                Рейтинг: {article?.score}
+              </Paragraph>
+            </Div>
           
-          <Link to={`article/${article?.id}`}> 
-            <Button size={'l'}>Подробнее</Button>
-          </Link>
+            
+            <Link to={`article/${article?.id}`}> 
+              <Button size={'l'}>Подробнее</Button>
+            </Link>
+          </Div>
       </Div>
     </Card>
         : ``

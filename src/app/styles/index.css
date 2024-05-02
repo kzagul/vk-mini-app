@@ -38,3 +38,7 @@ body {
 .header {
   padding: auto 16px;
 }
+
+p {
+  margin: 0;
+}
