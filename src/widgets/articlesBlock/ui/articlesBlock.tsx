@@ -8,7 +8,7 @@ import {
 
 import { useState, useEffect } from 'react'
 
-import ArticleCard from 'entities/article/ui/articleCard.tsx'
+import ArticleCard from 'entities/article/ui/'
 
 import { getArticles } from 'entities/article/api';
 

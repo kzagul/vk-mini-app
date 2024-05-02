@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 
 import vkBridge from '@vkontakte/vk-bridge'
-import { ConfigProvider, AdaptivityProvider } from '@vkontakte/vkui'
+// import { ConfigProvider, AdaptivityProvider } from '@vkontakte/vkui'
 import '@vkontakte/vkui/dist/vkui.css'
 import './styles/index.css'
 

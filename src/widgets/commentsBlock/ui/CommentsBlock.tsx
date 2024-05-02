@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import {Spinner, IconButton, Accordion, Button, Div, Title, List} from '@vkontakte/vkui'
 
 import { getArticleById } from 'entities/article/api';
-import { Comments } from 'entities/comment/ui/Comments.tsx';
+// import { Comments } from 'entities/comment/ui/Comments.tsx';
+import { Comments } from 'entities/comment/ui/';
+
 
 import { Icon16Replay } from '@vkontakte/icons';
 
@@ -32,6 +34,8 @@ function CommentsBlock ({ articleId }) {
     }, []);
   
     const { title, kids, id, url } = comment;
+
+    console.log(comment)
   
     return (
       <>
@@ -46,7 +50,7 @@ function CommentsBlock ({ articleId }) {
               iconPosition="before"
             >
               <Div style={{display: "flex", flexDirection: "row", gap: "32px", alignItems: "center"}}>
-                <Title>Комментарии</Title>
+                <Title>Комментарии: {kids.length}</Title>
                 <IconButton title="Удалить 36" onClick={handleClick}>
                   <Icon16Replay />
                 </IconButton>

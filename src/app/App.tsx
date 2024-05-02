@@ -3,7 +3,6 @@ import {
   View,
   Panel,
   PanelHeader,
-  Div,
   Title,
   AdaptivityProvider, 
   ConfigProvider,
@@ -11,13 +10,11 @@ import {
 
 import vkBridge, { parseURLSearchParamsForGetLaunchParams } from '@vkontakte/vk-bridge';
 import { useAdaptivity, useAppearance, useInsets } from '@vkontakte/vk-bridge-react';
-import '@vkontakte/vkui/dist/vkui.css';
-
 import { transformVKBridgeAdaptivity } from './transformVKBridgeAdaptivity';
 
-
-import NewsPage from 'pages/news/ui/News.tsx';
-import ArticlePage from 'pages/article/ui/Article.tsx';
+// routes
+import NewsPage from 'pages/news/';
+import ArticlePage from 'pages/article';
 
 import {
   createBrowserRouter,
@@ -38,17 +35,17 @@ const router = createBrowserRouter([
 
 function App() {
 
-  const vkBridgeAppearance = useAppearance() || undefined;
+  const vkBridgeAppearance = useAppearance() || 'light' || undefined;
   const vkBridgeInsets = useInsets() || undefined;
   const adaptivity = transformVKBridgeAdaptivity(useAdaptivity());
   const { vk_platform } = parseURLSearchParamsForGetLaunchParams(window.location.search);
   
   // appearance={vkBridgeAppearance}
-  
+  // appearance="light"
   return (
     <>
     <ConfigProvider
-      appearance="light"
+      appearance={vkBridgeAppearance}
       platform={vk_platform === 'desktop_web' ? 'vkcom' : undefined}
       isWebView={vkBridge.isWebView()}
       hasCustomPanelHeaderAfter={true}

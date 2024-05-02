@@ -1,5 +1,7 @@
 import React from 'react';
-import { Comment } from 'entities/comment/ui/Comment.tsx';
+// import { Comment } from 'entities/comment/ui/Comment.tsx';
+import { Comment } from 'entities/comment/ui/';
+
 import { Spinner, Accordion, View, Panel, PanelHeader, Group, Div, Title} from '@vkontakte/vkui'
 
 export const Comments = ({ commentIds }) => {
