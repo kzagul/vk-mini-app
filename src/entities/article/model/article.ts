@@ -1,34 +1,58 @@
-interface IArticle {
-
-}
-
 interface ArticleData {
-    name: string;
-    rating: string | number;
-    author: string;
+    id: number | string;
+    title: string;
+    score: string | number;
+    by: string;
+    time: Date | number | string
+    type: string
+    url: string
 }
 
-class Article implements IArticle {
-    private _name: string;
-    private _rating: string | number;
-    private _author: string;
+class Article {
+    private readonly _id: number | string;
+    private _title: string;
+    private _score: string | number;
+    private _by: string;
+    private _time: Date | number | string
+    private _type: string;
+    private _url: string;
 
     constructor (articleData: ArticleData) {
-        this._name = articleData.name;
-        this._rating = articleData.rating;
-        this._author = articleData.author;
+        this._id = articleData.id
+        this._title = articleData.title;
+        this._score = articleData.score;
+        this._by = articleData.by;
+        this._time = articleData.time;
+        this._type = articleData.type;
+        this._url = articleData.url;
     }
 
-    public get name () {
-        return this._name;
+    public get id () {
+        return this._id;
     }
 
-    public get rating () {
-        return this._rating;
+    public get title () {
+        return this._title;
     }
 
-    public get author () {
-        return this._author;
+    public get score () {
+        return this._score;
+    }
+
+    public get by () {
+        return this._by;
+    }
+
+    public get time () {
+        return this._time;
+    }
+
+    public get type () {
+        return this._type;
+    }
+
+    public get url () {
+        return this._url;
     }
 }
 

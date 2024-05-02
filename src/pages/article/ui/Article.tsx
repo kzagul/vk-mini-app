@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react'
 import { Link, useParams } from "react-router-dom";
 import { Spinner, Paragraph, Button, Header, Accordion, View, Panel, PanelHeader, Group, Div, Title, List} from '@vkontakte/vkui'
@@ -7,22 +6,18 @@ import { getArticleById } from 'entities/article/api';
 
 import { getComment } from 'entities/comment/api';
 
-import { Icon24AddOutline, Icon24MinusOutline } from '@vkontakte/icons';
-
 import { CommentsBlock } from 'widgets/commentsBlock/ui/CommentsBlock.tsx';
 
 import {formatData} from 'shared/lib/formatData'
 
 
 function ArticlePage() {     
-    // const id = 40207549
     const { id } = useParams();
-    const params = useParams();
 
     const [article, setArticle] = useState(null);
-    const [comment, setComment] = useState({});
     
     const [pending, setPending] = useState(true);
+
 
     const getNewsById = async (id) => {
         
@@ -51,6 +46,8 @@ function ArticlePage() {
 
       }, []);
 
+    console.log("article", article)
+
     return (
         <>
           {pending ?
@@ -59,12 +56,10 @@ function ArticlePage() {
               <Group>
                 <Div style={{display: "flex", flexDirection: "column", gap: "16px", margin: "0 16px"}}>
                   <Title level="1">{article?.title}</Title>  
-
                   <Paragraph>Автор статьи: {article?.by}</Paragraph>
                   <Paragraph>Рейтинг: {article?.score}</Paragraph>
                   <Paragraph>Дата публикации: {formatData(article?.time)}</Paragraph>
-                      
-                  <Paragraph>Ссылка на статью: {article?.url}</Paragraph>
+                  <Paragraph>Ссылка на статью: <a href={article?.url}>{article?.url}</a></Paragraph>
 
                   <Div style={{display: "flex", flexDirection: "row", gap: "16px"}}>
                     <Link to={article?.url}> 
@@ -76,7 +71,7 @@ function ArticlePage() {
                   </Div>
                 </Div>
 
-                <CommentsBlock key={article?.id} storyId={article?.id} />
+                <CommentsBlock key={article?.id} articleId={article?.id} />
               </Group>
             }
         </>   
