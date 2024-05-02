@@ -1,5 +1,5 @@
 ## HackerNews VK-mini-apps
-Ссылка на приложение - [HackerNews mini app](https://stage-app51915419-436a71d80d5f.pages.vk-apps.com/index.html)
+Ссылка на приложение - [HackerNews mini app](https://prod-app51915419-14359084ff5f.pages-ac.vk-apps.com/index.html)
 Ссылка на приложение на платформе - [vk-mini-apps](https://vk.com/app51915419?ref=catalog_recent)
 
 ## Запуск приложения
