@@ -2,7 +2,7 @@ import React from 'react';
 import { Comment } from 'entities/comment/ui/Comment.tsx';
 import { Spinner, Accordion, View, Panel, PanelHeader, Group, Div, Title} from '@vkontakte/vkui'
 
-export const Comments = ({ commentIds, root }) => {
+export const Comments = ({ commentIds }) => {
 
   return (
     <Group>

@@ -1,18 +1,16 @@
-import '@vkontakte/vkui/dist/vkui.css';
-
 import {
   AppRoot,
   View,
   Panel,
   PanelHeader,
   Div,
+  Title,
   AdaptivityProvider, 
   ConfigProvider,
 } from '@vkontakte/vkui'
 
 import vkBridge, { parseURLSearchParamsForGetLaunchParams } from '@vkontakte/vk-bridge';
 import { useAdaptivity, useAppearance, useInsets } from '@vkontakte/vk-bridge-react';
-// import { RouterProvider } from '@vkontakte/vk-mini-apps-router';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import { transformVKBridgeAdaptivity } from './transformVKBridgeAdaptivity';
@@ -34,12 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/article/:id",
     element: <ArticlePage/>,
-    // children: [
-    //   {
-    //     path: "article/:id",
-    //     element: <ArticlePage/>,
-    //   },
-    // ],
   },
 
 ]);
@@ -65,7 +57,10 @@ function App() {
         <AppRoot mode="full" safeAreaInsets={vkBridgeInsets}>
           <View activePanel="main">
             <Panel id="main">
-              <PanelHeader>Новости хакинга от HackerNews</PanelHeader>
+              <PanelHeader style={{display: "flex", justifyContent: "center"}} fixed>
+                <Title>Новости хакинга от HackerNews</Title>
+                
+              </PanelHeader>
 
               <RouterProvider router={router} />
             </Panel>

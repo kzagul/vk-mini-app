@@ -5,12 +5,16 @@ import axios from 'axios';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import ArticlesBlock from "widgets/articlesBlock"
+import { Icon16Replay } from '@vkontakte/icons';
 
 import {
   AppRoot,
   View,
   Panel,
   PanelHeader,
+  IconButton,
+  Button,
+  Spinner,
   Group,
   Header,
   CardGrid,
@@ -43,12 +47,16 @@ function NewsPage() {
   // }, []);
 
     const [news, setNews] = useState(null);
+    const [pending, setPending] = useState(true);
+
+
 
     const getNews = async () => {
       const response = await getArticles()
       // const json = await response.json();
       //  if (response.status === 200) {
         setNews(response)
+        setPending(false)
       // }
 
       // const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
@@ -58,6 +66,13 @@ function NewsPage() {
       //   setNews(json)
       // }
     };
+
+    const handleClick = async (e) => {
+      e.stopPropagation();
+      setPending(true)
+      await getNews()
+      setPending(false)
+    }
 
     useEffect(() => {
       // fetch('https://random-data-api.com/api/users/random_user')
@@ -80,14 +95,21 @@ function NewsPage() {
     return (
         <>
          {/* <PanelHeader>Новости хакинга от HackerNews</PanelHeader> */}
-
+         {pending ?
+            <Spinner size="large" style={{ margin: '20px 0' }} />
+              : 
           <Group
             mode="card"
             header={<Header mode="secondary">Новости</Header>}
+            style={{display: 'flex', flexDirection: "column", justifyContent: 'center'}}
           >
+            <Button mode="secondary" title="Обновить" onClick={handleClick} style={{margin: "0 auto"}}>
+              Обновить новости
+            </Button>
+            <br />
             <CardGrid size="s">
-              {news?.slice(0, 10)
-                .map((item) =>
+              {news?.slice(0, 100)
+                .map((item) => 
                   <ArticleCard 
                     key={item}
                     id={item}
@@ -96,6 +118,7 @@ function NewsPage() {
               }
             </CardGrid>
           </Group>
+          }
         </>      
     ); 
 } 

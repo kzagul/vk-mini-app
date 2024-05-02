@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { getArticles, getArticleById } from 'entities/article/api';
 
+import {formatData} from 'shared/lib/formatData'
+
 function ArticleCard({ id }) {
   const [article, setArticle] = useState(null);
 
@@ -18,12 +20,15 @@ function ArticleCard({ id }) {
 
   return (
     // onClick={() => window.open(url, '_blank').focus()}
+    <>
+    {article && article?.by
+      ?
     <Card mode="shadow">
       {/* <Link to={`article/${article?.id}`}> */}
       <Div
         style={{
           display: 'flex',
-          height: 220,
+          height: 250,
           alignItems: 'start',
           flexDirection: 'column',
           justifyContent: 'space-between',
@@ -38,7 +43,7 @@ function ArticleCard({ id }) {
               {article?.by || "Нет автора"}
             </p>
             <p>
-              Дата: {article?.time}
+              Дата: {formatData(article?.time)}
             </p>
             <p>
               Рейтинг: {article?.score}
@@ -49,6 +54,9 @@ function ArticleCard({ id }) {
           </Link>
       </Div>
     </Card>
+        : ``
+      }
+    </>
   )
 }
 

@@ -1,55 +1,62 @@
-import React from 'react';
 import { useState, useEffect } from 'react'
-import { Link, useParams } from "react-router-dom";
-import { Spinner, Button, Header, Accordion, View, Panel, PanelHeader, Group, Div, Title, List} from '@vkontakte/vkui'
+import { IconButton, Accordion, Button, Div, Title, List} from '@vkontakte/vkui'
 
 import { getArticleById } from 'entities/article/api';
-import { getComment } from 'entities/comment/api';
-import { Icon24AddOutline, Icon24MinusOutline } from '@vkontakte/icons';
-
 import { Comments } from 'entities/comment/ui/Comments.tsx';
 
+import { Icon16Replay } from '@vkontakte/icons';
 
 
 function CommentsBlock ({ storyId }) {
-    const [story, setStory] = useState({});
-  
-    useEffect(() => {
-      getArticleById(storyId).then((data) => {
+    const [comment, setComment] = useState({});
+
+    const getComments = async() => {
+      await getArticleById(storyId).then((data) => {
         if (data && data.url) {
-          setStory(data);
+          setComment(data);
         }
       });
+    }
+
+    const handleClick = async (e) => {
+      e.stopPropagation();
+      await getComments()
+      console.log('handleClick')
+    }
+  
+    useEffect(() => {
+      getComments()
     }, []);
   
-    const { title, kids, id, url } = story;
+    const { title, kids, id, url } = comment;
   
-    return story && url ? (
+    return comment && url ? (
       
-      // <Accordion open>
-      //   <Accordion.Summary
-      //     iconPosition="before"
-      //   >
-      //     <Title>Комментарии</Title>
-      //   </Accordion.Summary>
-      //   <Accordion.Content>
-      //     <div>
-      //       {kids && <Comments commentIds={kids} root />}
-      //     </div>
-      //   </Accordion.Content>
-      // </Accordion>
-  
-      <List>
-       
-  
-        {/* <Group> */}
-        <Title level="2">Комментарии</Title>
-          <Div>
-            {kids && <Comments commentIds={kids} root />}
+      <Accordion open>
+        <Accordion.Summary
+          iconPosition="before"
+        >
+          <Div style={{display: "flex", flexDirection: "row", gap: "32px", alignItems: "center"}}>
+            <Title>Комментарии</Title>
+            <IconButton title="Удалить 36" onClick={handleClick}>
+              <Icon16Replay />
+            </IconButton>
           </Div>
-        {/* </Group> */}
-      </List>
+        </Accordion.Summary>
+        <Accordion.Content>
+          <div>
+            {kids && <Comments commentIds={kids} root />}
+          </div>
+        </Accordion.Content>
+      </Accordion>
+  
+      // <List>
+      //   <Title level="2">Комментарии: {kids.length}</Title>
+      //     <Div>
+      //       {kids && <Comments commentIds={kids} />}
+      //     </Div>
+      // </List>
     ) : null;
-  };
+  }
 
 export {CommentsBlock}
