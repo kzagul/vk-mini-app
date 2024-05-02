@@ -21,7 +21,7 @@ function CommentsBlock ({ articleId }) {
       setPending(false)
     }
 
-    const handleClick = async (e) => {
+    const handleClick = async (e: Event) => {
       setPending(true)
       e.stopPropagation();
       await getComments()
@@ -33,8 +33,6 @@ function CommentsBlock ({ articleId }) {
     }, []);
   
     const { title, kids, id, url } = comment;
-
-    console.log(comment)
   
     return (
       <>

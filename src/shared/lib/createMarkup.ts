@@ -1,4 +1,4 @@
-const createMarkup = (markup) => ({
+const createMarkup = (markup: string) => ({
     __html: markup,
   });
   

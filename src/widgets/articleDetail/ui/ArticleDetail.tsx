@@ -17,32 +17,18 @@ function ArticleDetail() {
 
     const getNewsById = async (id) => {
         
-        const response = await getArticleById(id)
-        // const json = await response.json();
-        //  if (response.status === 200) {
-            setArticle(response)
-        // }
+    const response = await getArticleById(id)
+      setArticle(response)
 
-        setPending(false)
-
-        
-  
-        // const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-        // const json = await response.json();
-  
-        // if (response.status === 200) {
-        //   setNews(json)
-        // }
-      };
+      setPending(false)
+    };
 
 
     useEffect(() => {
-        getNewsById(id)
-          .catch(console.error);
+      getNewsById(id)
+        .catch(console.error);
 
-      }, []);
-
-    console.log("article", article)
+    }, []);
 
     return (
         <>

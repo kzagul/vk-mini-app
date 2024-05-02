@@ -2,8 +2,6 @@ import {
   AppRoot,
   View,
   Panel,
-  PanelHeader,
-  Title,
   AdaptivityProvider, 
   ConfigProvider,
 } from '@vkontakte/vkui'
@@ -11,6 +9,8 @@ import {
 import vkBridge, { parseURLSearchParamsForGetLaunchParams } from '@vkontakte/vk-bridge';
 import { useAdaptivity, useAppearance, useInsets } from '@vkontakte/vk-bridge-react';
 import { transformVKBridgeAdaptivity } from './transformVKBridgeAdaptivity';
+
+import Header from 'widgets/header';
 
 // routes
 import NewsPage from 'pages/news/';
@@ -40,8 +40,6 @@ function App() {
   const adaptivity = transformVKBridgeAdaptivity(useAdaptivity());
   const { vk_platform } = parseURLSearchParamsForGetLaunchParams(window.location.search);
   
-  // appearance={vkBridgeAppearance}
-  // appearance="light"
   return (
     <>
     <ConfigProvider
@@ -54,11 +52,7 @@ function App() {
         <AppRoot mode="full" safeAreaInsets={vkBridgeInsets}>
           <View activePanel="main">
             <Panel id="main">
-              <PanelHeader style={{display: "flex", justifyContent: "center"}} fixed>
-                <Title>Новости хакинга от HackerNews</Title>
-                
-              </PanelHeader>
-
+              <Header/>
               <RouterProvider router={router} />
             </Panel>
           </View>

@@ -13,48 +13,16 @@ import ArticleCard from 'entities/article/ui/'
 import { getArticles } from 'entities/article/api';
 
 function ArticlesBlock() {
-          // const [news, setNews] = useState(null)
-
-  // useEffect(() => {
-  //   const storyId = 1
-  //   // fetch(`${storyUrl + storyId}.json`)
-  //   // fetch("https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes", {
-  //   //   method: "GET",
-  //   //   headers: {
-  //   //     "X-RapidAPI-Key": "your-api-key",
-  //   //     "X-RapidAPI-Host": "jokes-by-api-ninjas.p.rapidapi.com",
-  //   //   },
-  //   // })
-  //     // .then((response) => response.json())
-  //     // .then((data) => {
-  //     //   setJoke(data[0].joke);
-  //     //   console.log(data);
-  //     // })
-  //     // .catch((error) => console.log(error));
-  // }, []);
-
   const [news, setNews] = useState(null);
   const [pending, setPending] = useState(true);
 
-
-
   const getNews = async () => {
     const response = await getArticles()
-    // const json = await response.json();
-    //  if (response.status === 200) {
       setNews(response)
       setPending(false)
-    // }
-
-    // const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-    // const json = await response.json();
-
-    // if (response.status === 200) {
-    //   setNews(json)
-    // }
   };
 
-  const handleClick = async (e) => {
+  const handleClick = async (e: Event) => {
     e.stopPropagation();
     setPending(true)
     await getNews()
@@ -62,20 +30,6 @@ function ArticlesBlock() {
   }
 
   useEffect(() => {
-    // fetch('https://random-data-api.com/api/users/random_user')
-    //       .then(response => response.json())
-    //       .then(data => setUser(data));
-
-    // console.log(user)
-    // fetch("https://jsonplaceholder.typicode.com/posts")
-    //   .then((res) => res.json())
-    //   .then(newsPosts);
-    // getArticles()
-
-    // console.log(news)
-
-
-
     getNews()
       .catch(console.error);
 
