@@ -2,28 +2,28 @@ import { useState, useEffect } from 'react'
 import {Spinner, IconButton, Accordion, Div, Title} from '@vkontakte/vkui'
 
 import { getArticleById } from 'entities/article/api';
-import { Comments } from 'entities/comment/ui/';
+import { CommentsCard } from 'entities/comment/ui/';
+import { Article } from 'entities/article/model/';
 
 
 import { Icon16Replay } from '@vkontakte/icons';
 
-
 function CommentsBlock ({ articleId }) {
-    const [comment, setComment] = useState({});
-    const [pending, setPending] = useState(true);
+    const [article, setArticle] = useState<Article>({} as Article);
+    const [pending, setPending] = useState<boolean>(true);
 
     const getComments = async() => {
       await getArticleById(articleId).then((data) => {
         if (data && data.url) {
-          setComment(data);
+          setArticle(data);
         }
       });
       setPending(false)
     }
 
-    const handleClick = async (e: Event) => {
+    const handleClick = async (event) => {
       setPending(true)
-      e.stopPropagation();
+      event.stopPropagation();
       await getComments()
       setPending(false)
     }
@@ -32,17 +32,14 @@ function CommentsBlock ({ articleId }) {
       getComments()
     }, []);
   
-    const { title, kids, id, url } = comment;
+    const { kids } = article;
   
     return (
       <>
       {pending ?
         <Spinner size="large" style={{ margin: '20px 0' }} />
-        : 
-    
-        comment && url ? (
-      
-          <Accordion open={pending}>
+        : article ? (
+          <Accordion>
             <Accordion.Summary
               iconPosition="before"
             >
@@ -55,7 +52,7 @@ function CommentsBlock ({ articleId }) {
             </Accordion.Summary>
             <Accordion.Content>
               <div>
-                {kids && <Comments commentIds={kids} root />}
+                {kids && <CommentsCard commentIds={kids} />}
               </div>
             </Accordion.Content>
           </Accordion>

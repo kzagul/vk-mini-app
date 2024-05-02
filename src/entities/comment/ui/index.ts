@@ -1,5 +1,5 @@
-import {Comment} from "./Comment.tsx"
-import {Comments} from "./Comments.tsx"
+import {CommentCard} from "./Comment.tsx"
+import {CommentsCard} from "./Comments.tsx"
 
 
-export { Comment, Comments }
+export { CommentCard, CommentsCard }

@@ -1,18 +1,16 @@
-import React from 'react';
-// import { Comment } from 'entities/comment/ui/Comment.tsx';
-import { Comment } from 'entities/comment/ui/';
+import { CommentCard } from 'entities/comment/ui/';
 
-import { Spinner, Accordion, View, Panel, PanelHeader, Group, Div, Title} from '@vkontakte/vkui'
+import { Group } from '@vkontakte/vkui'
 
-export const Comments = ({ commentIds }) => {
+export const CommentsCard = ({ commentIds }) => {
 
   return (
     <Group>
       {commentIds.slice(0, 3).map(
-        (id, i) =>
+        (id) =>
           id && (
             <div key={id}>
-              <Comment commentId={id} />
+              <CommentCard commentId={id} />
             </div>
           )
       )}

@@ -22,8 +22,8 @@ function ArticlesBlock() {
       setPending(false)
   };
 
-  const handleClick = async (e: Event) => {
-    e.stopPropagation();
+  const handleClick = async (event) => {
+    event.stopPropagation();
     setPending(true)
     await getNews()
     setPending(false)

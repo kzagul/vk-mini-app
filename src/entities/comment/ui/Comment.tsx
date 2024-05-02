@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getComment } from 'entities/comment/api/';
-import { Comments } from './Comments.tsx';
-import { Title, Spinner, Accordion, View, Panel, Header, SimpleCell, Avatar, PanelHeader, Group, Div, List} from '@vkontakte/vkui'
+import { CommentsCard } from './Comments.tsx';
+import { SimpleCell, Avatar, Div, List} from '@vkontakte/vkui'
 
 import {createMarkup} from "shared/lib/createMarkup.ts";
+import { Comment } from 'entities/comment/model/';
 
-export const Comment = ({ commentId }) => {
-  const [comment, setComment] = useState({});
+import {formatData} from 'shared/lib/formatData'
+
+export const CommentCard = ({ commentId }) => {
+  const [comment, setComment] = useState<Comment>({} as Comment);
 
   useEffect(() => {
     getComment(commentId).then((data) => data && data.type && setComment(data));
@@ -16,14 +19,14 @@ export const Comment = ({ commentId }) => {
 
   return (
     <Div>
-      {comment && !comment.deleted && (
+      {comment && (
         <>
             <List>
                 <SimpleCell before={<Avatar initials={comment?.by !== undefined ? comment?.by[0] : ``} src={'user_id34'} size={32} />}>{comment?.by}</SimpleCell>
-                <SimpleCell>{comment?.time}</SimpleCell>
+                <SimpleCell>{formatData(comment.time)}</SimpleCell>
             </List>
             <div dangerouslySetInnerHTML={createMarkup(text)}></div>
-          {kids && <Comments commentIds={kids} />}
+          {kids && <CommentsCard commentIds={kids} />}
         </>
       )}
     </Div>

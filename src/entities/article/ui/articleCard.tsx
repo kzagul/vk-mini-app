@@ -2,11 +2,11 @@ import { Card, Div, Title, Button } from '@vkontakte/vkui'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
-import { getArticles, getArticleById } from 'entities/article/api';
+import { getArticleById } from 'entities/article/api';
 
 import {formatData} from 'shared/lib/formatData'
 
-function ArticleCard({ id }) {
+function ArticleCard({ id } : { id: string}) {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function ArticleCard({ id }) {
           paddingBottom: '32px'
         }}
       >
-        <Title level={2}>{article?.title}</Title>
+        <Title level={'2'}>{article?.title}</Title>
 
             <p>
               {article?.by || "Нет автора"}
