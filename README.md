@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+## HackerNews VK-mini-apps
+Ссылка на приложение - [HackerNews mini app](https://stage-app51915419-436a71d80d5f.pages.vk-apps.com/index.html)
+Ссылка на приложение на платформе - [vk-mini-apps](https://vk.com/app51915419?ref=catalog_recent)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Запуск приложения
 
-Currently, two official plugins are available:
+В консоли для запуска режима разработки пропишите:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+ yarn start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Перейдите по - [localhost:3000](http://localhost:3000/)
+По умолчанию установлен Порт: 3000
+
+Для запуска на платформе VK нужно перейти на [devportal](https://dev.vk.com/ru) или в [управление](https://vk.com/apps?act=manage) и создать новый мини апп.  
+Необходимо вставить URL на котором работает приложение в настройки, предварительно включив режим разработки.
+Теперь можно открыть мини апп, нажав на его иконку.
+Список созданных мини приложений [тут](https://vk.com/apps?act=manage) или [тут](https://dev.vk.com/ru/admin/apps-list).
+
+## Деплой приложения
+
+Для того чтобы поделиться приложением запущенным на localhost со своими друзьями,нужно установить vk-tunnel и запустить уже подготовленный скрипт из package.json
+
+```sh
+yarn global add @vkontakte/vk-tunnel
+yarn run tunnel
+```
+
+После чего в консоли появится ссылка, по которой будет доступно приложение.
+
+Для того чтобы захостить приложение на сервера ВКонтакте нужно зайти в vk-hosting-config.json и указать id приложения. Далее можно запустить уже подготовленный скрипт:
+
+```sh
+yarn run deploy
+```
+
+### Стэк
+
+- React + TypeScript
+- Vite
+- VK UI
+- FSD (архитектурный подход)
+- экосистема VK-mini-apps
