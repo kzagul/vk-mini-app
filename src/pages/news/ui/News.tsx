@@ -1,11 +1,12 @@
 import React from 'react'; 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, componentDidMount } from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import ArticlesBlock from "widgets/articlesBlock"
 import { Icon16Replay } from '@vkontakte/icons';
+
 
 import {
   AppRoot,
@@ -86,15 +87,24 @@ function NewsPage() {
       // getArticles()
 
       // console.log(news)
+
+
+
       getNews()
         .catch(console.error);
-    }, []);
 
-    console.log("news: ", news)
+
+      const intervalCall = setInterval(() => {
+        getNews()
+          .catch(console.error);
+      }, 30000);
+      return () => {
+        clearInterval(intervalCall);
+      };
+    }, []);
 
     return (
         <>
-         {/* <PanelHeader>Новости хакинга от HackerNews</PanelHeader> */}
          {pending ?
             <Spinner size="large" style={{ margin: '20px 0' }} />
               : 

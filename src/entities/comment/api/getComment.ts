@@ -1,7 +1,7 @@
-import axios from 'axios';
+import {apiInstance} from 'shared/api/api.ts'
 
-const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
-const itemUrl = `${baseUrl}/item/`;
+// const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
+const itemUrl = `/item/`;
 
 // export const getComment = async (commentId) => {
 //     try {
@@ -18,11 +18,19 @@ const itemUrl = `${baseUrl}/item/`;
 // import { selectFields } from '../selectors/selectFields';
 
 async function getComment (commentId) {
+    try {
+        const response = await apiInstance.get(`${itemUrl + commentId}.json`);
+        return response
+    } catch (err) {
+        console.error(err);
+    }
     // const result = await axios.get(newStoriesUrl);
-    const response = await fetch(`${itemUrl + commentId}.json`);
     // const json = await response.json();
     
-    return await response.json();
+
+    // work
+    // const response = await fetch(`${itemUrl + commentId}.json`);
+    // return await response.json();
 }
 
 export {getComment}

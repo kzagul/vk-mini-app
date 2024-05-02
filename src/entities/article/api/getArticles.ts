@@ -1,17 +1,19 @@
-import axios from 'axios';
+import {apiInstance} from 'shared/api/api.ts'
 
-const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
-const newStoriesUrl = `${baseUrl}topstories.json`;
-const storyUrl = `${baseUrl}item/`;
-
-// import { selectFields } from '../selectors/selectFields';
+// const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
+const newStoriesUrl = `topstories.json`;
 
 async function getArticles () {
-    // const result = await axios.get(newStoriesUrl);
-    const response = await fetch(newStoriesUrl);
-    // const json = await response.json();
-    
-    return await response.json();
+    try {
+        const response = await apiInstance.get(newStoriesUrl);
+        return await response
+    } catch (err) {
+        console.error(err);
+    }
+
+    // working
+    // const response = await fetch(newStoriesUrl);
+    // return await response.json();
 }
 
 export {getArticles}
