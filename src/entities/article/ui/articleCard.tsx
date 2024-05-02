@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 
 import { getArticleById } from 'entities/article/api';
 
+import { Article } from 'entities/article/model';
+
 import {formatData} from 'shared/lib/formatData'
 
 function ArticleCard({ id } : { id: string}) {
-  const [article, setArticle] = useState(null);
+  const [article, setArticle] = useState<Article>({} as Article);
 
   useEffect(() => {
     getArticleById(id).then((data) => {

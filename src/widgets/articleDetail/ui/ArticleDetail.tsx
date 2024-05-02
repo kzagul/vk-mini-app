@@ -4,6 +4,8 @@ import { Spinner, Paragraph, Button, Group, Div, Title} from '@vkontakte/vkui'
 
 import { getArticleById } from 'entities/article/api';
 
+import { Article } from 'entities/article/model';
+
 import { CommentsBlock } from 'widgets/commentsBlock/ui/CommentsBlock.tsx';
 
 import {formatData} from 'shared/lib/formatData'
@@ -11,21 +13,23 @@ import {formatData} from 'shared/lib/formatData'
 function ArticleDetail() {     
     const { id } = useParams();
 
-    const [article, setArticle] = useState(null);
+    const [article, setArticle] = useState<Article>({} as Article);
     
     const [pending, setPending] = useState(true);
 
-    const getNewsById = async (id) => {
+    const getNewsById = async (id: number) => {
         
-    const response = await getArticleById(id)
-      setArticle(response)
+    const response = await getArticleById(Number(id))
+      if (response !== undefined) {
+        setArticle(response)
+      }
 
       setPending(false)
     };
 
 
     useEffect(() => {
-      getNewsById(id)
+      getNewsById(Number(id))
         .catch(console.error);
 
     }, []);

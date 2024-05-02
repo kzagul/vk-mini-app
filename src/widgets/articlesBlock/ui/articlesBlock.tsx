@@ -13,20 +13,23 @@ import ArticleCard from 'entities/article/ui/'
 import { getArticles } from 'entities/article/api';
 
 function ArticlesBlock() {
-  const [news, setNews] = useState(null);
+  const [news, setNews] = useState<number[]>([]);
   const [pending, setPending] = useState(true);
 
   const getNews = async () => {
     const response = await getArticles()
+    if (response) {
       setNews(response)
+    }
       setPending(false)
   };
 
-  const handleClick = async (event) => {
+  // React.ChangeEvent<HTMLInputElement>
+  const handleClick = async (event: any) => {
     event.stopPropagation();
-    setPending(true)
-    await getNews()
-    setPending(false)
+    // setPending(true)
+    // await getNews()
+    // setPending(false)
   }
 
   useEffect(() => {
@@ -62,7 +65,7 @@ function ArticlesBlock() {
                     .map((item) => 
                     <ArticleCard 
                         key={item}
-                        id={item}
+                        id={item.toString()}
                     />
                     )
                 }

@@ -2,7 +2,7 @@ import { CommentCard } from 'entities/comment/ui/';
 
 import { Group } from '@vkontakte/vkui'
 
-export const CommentsCard = ({ commentIds }) => {
+export const CommentsCard = ({ commentIds } : {commentIds: number[] | string[]}) => {
 
   return (
     <Group>

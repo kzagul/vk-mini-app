@@ -8,7 +8,7 @@ import { Article } from 'entities/article/model/';
 
 import { Icon16Replay } from '@vkontakte/icons';
 
-function CommentsBlock ({ articleId }) {
+function CommentsBlock ({ articleId } : {articleId: number | string}) {
     const [article, setArticle] = useState<Article>({} as Article);
     const [pending, setPending] = useState<boolean>(true);
 
@@ -21,7 +21,7 @@ function CommentsBlock ({ articleId }) {
       setPending(false)
     }
 
-    const handleClick = async (event) => {
+    const handleClick = async (event: any) => {
       setPending(true)
       event.stopPropagation();
       await getComments()

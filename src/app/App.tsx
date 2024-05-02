@@ -17,11 +17,12 @@ import NewsPage from 'pages/news/';
 import ArticlePage from 'pages/article';
 
 import {
-  createBrowserRouter,
+  // createBrowserRouter,
+  createMemoryRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createMemoryRouter([
   {
     path: "/",
     element: <NewsPage/>,
@@ -32,6 +33,18 @@ const router = createBrowserRouter([
   },
 
 ]);
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <NewsPage/>,
+//   },
+//   {
+//     path: "/article/:id",
+//     element: <ArticlePage/>,
+//   },
+
+// ]);
 
 function App() {
 

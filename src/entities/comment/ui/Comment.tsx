@@ -8,7 +8,7 @@ import { Comment } from 'entities/comment/model/';
 
 import {formatData} from 'shared/lib/formatData'
 
-export const CommentCard = ({ commentId }) => {
+export const CommentCard = ({ commentId } : {commentId: number | string}) => {
   const [comment, setComment] = useState<Comment>({} as Comment);
 
   useEffect(() => {
