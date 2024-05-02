@@ -6,6 +6,7 @@ interface ArticleData {
     time: Date | number | string
     type: string
     url: string
+    kids: number[] | string[]
 }
 
 class Article {
@@ -16,6 +17,8 @@ class Article {
     private _time: Date | number | string
     private _type: string;
     private _url: string;
+    private _kids: number[] | string[];
+
 
     constructor (articleData: ArticleData) {
         this._id = articleData.id
@@ -25,6 +28,7 @@ class Article {
         this._time = articleData.time;
         this._type = articleData.type;
         this._url = articleData.url;
+        this._kids = articleData.kids;
     }
 
     public get id () {
@@ -53,6 +57,10 @@ class Article {
 
     public get url () {
         return this._url;
+    }
+
+    public get kids () {
+        return this._kids;
     }
 }
 

@@ -1,36 +1,20 @@
 import {apiInstance} from 'shared/api/api.ts'
 
-// const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
 const itemUrl = `/item/`;
 
-// export const getComment = async (commentId) => {
-//     try {
-//       const res = await axios
-//         .get(`${itemUrl + commentId}.json`)
-//         .then(({ data }) => data);
-//       return res;
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
-  
+import {Comment, CommentData} from '../model'
 
-// import { selectFields } from '../selectors/selectFields';
+function processData(data: CommentData) {
+    return new Comment(data)
+   }
 
-async function getComment (commentId) {
+async function getComment (commentId: number | string) {
     try {
         const response = await apiInstance.get(`${itemUrl + commentId}.json`);
-        return response
+        return processData(response as CommentData)
     } catch (err) {
         console.error(err);
     }
-    // const result = await axios.get(newStoriesUrl);
-    // const json = await response.json();
-    
-
-    // work
-    // const response = await fetch(`${itemUrl + commentId}.json`);
-    // return await response.json();
 }
 
 export {getComment}

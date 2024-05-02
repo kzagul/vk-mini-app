@@ -1,6 +1,5 @@
 import {apiInstance} from 'shared/api/api.ts'
 
-// const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
 const newStoriesUrl = `topstories.json`;
 
 async function getArticles () {
@@ -10,10 +9,6 @@ async function getArticles () {
     } catch (err) {
         console.error(err);
     }
-
-    // working
-    // const response = await fetch(newStoriesUrl);
-    // return await response.json();
 }
 
 export {getArticles}
